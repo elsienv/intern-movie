@@ -14,6 +14,7 @@ const HomePage = () => {
     loading,
     error,
   } = UseMovies();
+  
   const [searchQuery, setSearchQuery] = useState("");
   const [trendingTimeWindow, setTrendingTimeWindow] = useState("day"); // Default to "today"
 

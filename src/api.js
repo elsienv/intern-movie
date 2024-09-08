@@ -1,5 +1,6 @@
 import axios from "axios"
 
+// untuk mengambil API key dan base URL dari environment variables (.env)
 const apiKey = process.env.REACT_APP_APIKEY
 const baseUrl = process.env.REACT_APP_BASEURL
 

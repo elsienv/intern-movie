@@ -4,7 +4,7 @@ const MoviePage = () => {
   return (
     <div>
       <h1>Movies</h1>
-      {/* Di sini kamu bisa tambahkan komponen MovieCard atau daftar film */}
+      {/* ini adalah halaman movie, belum selesai */}
     </div>
   );
 };

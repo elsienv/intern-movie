@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/images/logo.png";
 
-const Header = () => {
-  const NavBar = (
-    {"NavBarLink" : "home", Linkto : "/"}, 
-    {"NavBarLink" : "movies", Linkto : "/movies"},
-    {"NavBarLink" : "about", Linkto : "/about"},
-    {"NavBarLink" : "contact", Linkto : "/contact"} 
-  )
+const Header = () => { 
+  const navLinks = [ //ditulis sebagai array objek
+    { name : "Home", to : "/"}, 
+    { name : "Movies", to : "/movies"},
+    { name : "About", to : "/about"},
+    { name : "Contact", to : "/contact"} 
+  ];
 
   return (
     <header className="App-header">
@@ -17,18 +17,11 @@ const Header = () => {
         <img src={logo} alt="Logo" className="logo" />
         <nav>
           <ul className="nav-links">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/movies">Movies</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link to={link.to}>{link.name}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

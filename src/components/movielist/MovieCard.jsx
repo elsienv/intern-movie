@@ -8,8 +8,6 @@ const MovieCard = ({ propsmovie }) => (
       <div className="Movie-title">{propsmovie.title}</div>
       <div className="Movie-date">Release: {propsmovie.release_date}</div>
       <div className="Movie-rate">Rating: {propsmovie.vote_average}</div>
-
-      {propsmovie.MovieCard}
     </div>
   </div>
 );
